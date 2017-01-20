@@ -29,7 +29,7 @@ import { Meal } from './meals.model';
 
    submitNewMeal(name: string, details: string, calories: number) {
      var newMealToAdd = new Meal(name, details, calories);
-     if (name === "" || details === "" || calories === undefined) {
+     if (name === "" || details === "" || !calories) {
        alert('fill out ALL the information please!');
      } else {
        this.newMealSendToFront.emit(newMealToAdd);
