@@ -18,12 +18,13 @@ import { Meal } from './meals.model';
     Above 500 Calories
   </label>
 </div>
-
-  <div *ngFor="let currentMeal of childMealList | calories:filterByCalories" (click)="mealToNowEdit(currentMeal)">
+<div class="holdTheTiles">
+  <div *ngFor="let currentMeal of childMealList | calories:filterByCalories" (click)="mealToNowEdit(currentMeal)" class="mealTile">
     <h1>{{currentMeal.name}}</h1>
     <p>{{currentMeal.details}}</p>
     <h4>{{currentMeal.calories}} calories</h4>
   </div>
+</div>
   `
 })
 

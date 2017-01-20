@@ -1,0 +1,117 @@
+.container {
+  margin: 0;
+  width: 100%;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+  @media (max-width: 490px) {
+    label {
+      flex-basis: 90%;
+      margin: 5px 5%;
+    }
+  }
+  label {
+    background-color: #C39BD3;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding: 20px;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      background-color: #F4ECF7;
+      color: #C39BD3;
+      font-size: 1.1em;
+    }
+    input[type="radio"] {
+      visibility: hidden;
+    }
+  }
+}
+
+.holdTheTiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 100px;
+  .mealTile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 31%;
+    margin: 1%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0px 20px 0px 0px;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      box-shadow: 5px 5px 40px #555;
+    }
+    @media (max-width: 1080px) {
+      flex-basis: 45%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
+    @media (max-width: 670px) {
+      flex-basis: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  .mealTile:nth-of-type(3n) {
+    background-color: #7FB3D5;
+    &:hover {
+      box-shadow: 5px 5px 40px #154360;
+    }
+  }
+  .mealTile:nth-of-type(3n+1) {
+    background-color: #76D7C4;
+    &:hover {
+      box-shadow: 5px 5px 40px #0B5345;
+    }
+  }
+  .mealTile:nth-of-type(3n+2) {
+    background-color: #F7DC6F;
+    &:hover {
+      box-shadow: 5px 5px 40px #7D6608;
+    }
+  }
+}
+
+.title {
+  margin-left: 5%;
+  color: #C39BD3;
+}
+
+.newMeal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #C39BD3;
+  & > div {
+    margin: 1%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (max-width: 1080px) {
+    & > div {
+      flex-basis: 48%;
+    }
+  }
+  button {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+  }
+}
